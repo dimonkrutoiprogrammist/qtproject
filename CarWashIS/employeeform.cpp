@@ -1,6 +1,6 @@
 #include "employeeform.h"
 #include "databasemanager.h"
-#include <QLabel>  // ← ИСПРАВИТЬ (было "qlabel.h")
+#include <QLabel>  
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QGridLayout>
