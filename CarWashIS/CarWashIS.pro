@@ -27,7 +27,7 @@ HEADERS += \
     employeeform.h \
     reportform.h
 
-# Закомментируйте или удалите эти строки, если нет иконок
+
 # RESOURCES += \
 #     resources.qrc
 
