@@ -1,0 +1,17 @@
+release/main.o
+release/databasemanager.o
+release/loginwindow.o
+release/mainwindow.o
+release/clientform.o
+release/orderform.o
+release/serviceform.o
+release/employeeform.o
+release/reportform.o
+release/moc_databasemanager.o
+release/moc_loginwindow.o
+release/moc_mainwindow.o
+release/moc_clientform.o
+release/moc_orderform.o
+release/moc_serviceform.o
+release/moc_employeeform.o
+release/moc_reportform.o

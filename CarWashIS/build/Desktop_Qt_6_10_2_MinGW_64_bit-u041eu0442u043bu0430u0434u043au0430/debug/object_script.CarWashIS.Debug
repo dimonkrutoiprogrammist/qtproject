@@ -1,0 +1,17 @@
+debug/main.o
+debug/databasemanager.o
+debug/loginwindow.o
+debug/mainwindow.o
+debug/clientform.o
+debug/orderform.o
+debug/serviceform.o
+debug/employeeform.o
+debug/reportform.o
+debug/moc_databasemanager.o
+debug/moc_loginwindow.o
+debug/moc_mainwindow.o
+debug/moc_clientform.o
+debug/moc_orderform.o
+debug/moc_serviceform.o
+debug/moc_employeeform.o
+debug/moc_reportform.o
