@@ -7,7 +7,7 @@
 #include <QGridLayout>
 #include <QGroupBox>
 #include <QPushButton>
-#include <QLabel>  // ← ДОБАВИТЬ
+#include <QLabel> 
 
 ClientForm::ClientForm(QWidget *parent)
     : QWidget(parent)
@@ -26,7 +26,7 @@ void ClientForm::setupUI()
     mainLayout->setSpacing(10);
     mainLayout->setContentsMargins(15, 15, 15, 15);
 
-    // Панель поиска
+    // Панель
     QHBoxLayout *searchLayout = new QHBoxLayout();
     searchEdit = new QLineEdit(this);
     searchEdit->setPlaceholderText("🔍 Поиск по ФИО, телефону или номеру ТС...");
@@ -50,7 +50,7 @@ void ClientForm::setupUI()
     searchLayout->addWidget(searchButton);
     mainLayout->addLayout(searchLayout);
 
-    // Форма ввода
+    // Форма
     QGroupBox *inputGroup = new QGroupBox("Данные клиента", this);
     inputGroup->setStyleSheet("QGroupBox { font-weight: bold; margin-top: 10px; }");
     QGridLayout *inputLayout = new QGridLayout(inputGroup);
@@ -153,7 +153,7 @@ void ClientForm::setupUI()
         );
     mainLayout->addWidget(tableView);
 
-    // Connections
+    
     connect(searchButton, &QPushButton::clicked, this, &ClientForm::onSearchClient);
     connect(searchEdit, &QLineEdit::returnPressed, this, &ClientForm::onSearchClient);
     connect(addButton, &QPushButton::clicked, this, &ClientForm::onAddClient);
@@ -172,7 +172,7 @@ void ClientForm::loadData()
     QSqlTableModel *model = db.getClientModel();
 
     if (model) {
-        // Установка заголовков
+       
         model->setHeaderData(0, Qt::Horizontal, "ID");
         model->setHeaderData(1, Qt::Horizontal, "Фамилия");
         model->setHeaderData(2, Qt::Horizontal, "Имя");
@@ -242,7 +242,7 @@ void ClientForm::onSearchClient()
     DatabaseManager db;
     QList<Client> clients = db.searchClients(searchText);
 
-    // Создаём временную модель
+   
     QSqlTableModel *model = new QSqlTableModel(this);
     model->setTable("clients");
     model->setFilter(QString("last_name LIKE '%%1%' OR first_name LIKE '%%1%' OR phone LIKE '%%1%' OR car_number LIKE '%%1%'").arg(searchText));
